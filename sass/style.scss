@@ -1,0 +1,83 @@
+$height: 15px;
+$color-brand: #e61616;
+$color-primary: #ffb703;
+$color-secondary: #023047;
+$color-white: #fff;
+$box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+$direction: center;
+
+.button {
+  padding: 20px 15px;
+  background-color: $color-brand;
+  color: $color-white;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: row;
+  align-items: $direction;
+  &--primary {
+    background-color: $color-primary;
+    color: green;
+  }
+  &.button--secondary {
+    background-color: $color-secondary;
+  }
+  p{
+    color: blue;
+  }
+  &:hover {
+    padding: 30px 20px;
+    color: green;
+  }
+  @media (min-width: 768px){
+    padding: 500px;
+    color: black;
+  }
+}
+
+
+p{
+  @if( 4 < 2){
+    color:red;
+  }
+  @else if( 5== 5){
+    color:blue;
+  }
+  @else if(null){
+    color:green;
+  }
+}
+
+
+
+
+
+@for $i from 1 through 5{
+  .m#{$i}{
+    margin: $i+px;
+  }
+}
+
+@for $i from 1 to 5{
+  .p{
+    padding: $i+px;
+  }
+}
+// .card{
+//   .card__title {
+
+//   }
+//   .card__body {
+//     .card__body__main{
+
+//     }
+//     .card__body__img{
+      
+//     }
+//   }
+// }
+
+$button: "button";
+
+.#{$button}--ejemplo{
+  padding: 15px;
+}

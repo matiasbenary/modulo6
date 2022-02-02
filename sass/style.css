@@ -1,0 +1,75 @@
+.button {
+  padding: 20px 15px;
+  background-color: #e61616;
+  color: #fff;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.button--primary {
+  background-color: #ffb703;
+  color: green;
+}
+.button.button--secondary {
+  background-color: #023047;
+}
+.button p {
+  color: blue;
+}
+.button:hover {
+  padding: 30px 20px;
+  color: green;
+}
+@media (min-width: 768px) {
+  .button {
+    padding: 500px;
+    color: black;
+  }
+}
+
+p {
+  color: blue;
+}
+
+.m1 {
+  margin: 1px;
+}
+
+.m2 {
+  margin: 2px;
+}
+
+.m3 {
+  margin: 3px;
+}
+
+.m4 {
+  margin: 4px;
+}
+
+.m5 {
+  margin: 5px;
+}
+
+.p {
+  padding: 1px;
+}
+
+.p {
+  padding: 2px;
+}
+
+.p {
+  padding: 3px;
+}
+
+.p {
+  padding: 4px;
+}
+
+.button--ejemplo {
+  padding: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
