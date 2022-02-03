@@ -72,4 +72,61 @@ p {
   padding: 15px;
 }
 
+.card, main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  color: #333;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  color: #f42424;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  margin: 15px;
+  padding: 10px;
+  color: #eee;
+  background-color: red;
+  border-radius: 5px;
+  outline: none;
+}
+.btn:hover {
+  background-color: #cc0000;
+}
+.btn:active {
+  background-color: maroon;
+}
+
+.btn--primary {
+  margin: 15px;
+  padding: 10px;
+  color: #eee;
+  background-color: #ffb703;
+  border-radius: 5px;
+  outline: none;
+}
+.btn--primary:hover {
+  background-color: #cf9400;
+}
+.btn--primary:active {
+  background-color: #835d00;
+}
+
 /*# sourceMappingURL=style.css.map */

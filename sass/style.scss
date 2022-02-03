@@ -62,6 +62,11 @@ p{
     padding: $i+px;
   }
 }
+// btn btn-primary
+// bloque
+// bloque--modificador 
+// bloque__elemento
+// bloque__elemento--modicador
 // .card{
 //   .card__title {
 
@@ -80,4 +85,76 @@ $button: "button";
 
 .#{$button}--ejemplo{
   padding: 15px;
+}
+
+
+
+// extend
+
+%center {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+  @extend %center;
+  color:#333;
+}
+
+.card{
+  @extend %center;
+}
+
+@function dividir($a,$b){
+  @return $a/$b
+}
+
+@mixin centerItems($direction:row) {
+  display:flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  @include centerItems;
+  margin: dividir(10px,2px)+px;
+  color:lighten(rgb(218, 11, 11), 10);
+}
+
+.footer{
+  @include centerItems(column);
+}
+
+@mixin btn($color,$bg){
+  margin: 15px;
+  padding: 10px;
+  color: $color;
+  background-color: $bg;
+  border-radius: 5px;
+  outline: none;
+  &:hover{
+    background-color: darken($bg,10);
+  }
+  &:active{
+    background-color: darken($bg,25);
+  }
+}
+
+.btn{
+  @include btn(#eee,red);
+}
+
+.btn--primary{
+  @include btn(#eee,$color-primary);
+}
+
+$listaTamanios: 2px,4px,8px,16px,24px,32px;
+
+@each $key,$value in $listaTamanios {
+  .m#{$key}{
+    margin: $value;
+  }
 }
