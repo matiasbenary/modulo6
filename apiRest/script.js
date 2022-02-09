@@ -1,4 +1,3 @@
-const cards = document.getElementById("cards");
 
 // fetch("https://rickandmortyapi.com/api/character/")
 //   .then((response) => {
@@ -31,6 +30,7 @@ const cards = document.getElementById("cards");
 //     cards.innerHTML = newCards;
 //   });
 console.log("Hola");
+const cards = document.getElementById("cards");
 
 fetch("https://rickandmortyapi.com/api/character/")
 .then(response=> response.json())
