@@ -1,0 +1,27 @@
+.button {
+  padding: 20px 15px;
+  background-color: $color-brand;
+  color: $color-white;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: row;
+  align-items: $direction;
+  &--primary {
+    background-color: $color-primary;
+    color: green;
+  }
+  &.button--secondary {
+    background-color: $color-secondary;
+  }
+  p{
+    color: blue;
+  }
+  &:hover {
+    padding: 30px 20px;
+    color: green;
+  }
+  @media (min-width: 768px){
+    padding: 500px;
+    color: black;
+  }
+}

@@ -1,0 +1,25 @@
+// abstracts/ utils
+// vendors/
+// base/
+// layout/
+// components/
+// pages/
+// themes/
+
+@import 'utils/variables';
+@import 'utils/funticiones';
+@import 'utils/mixins';
+
+@import 'vendor/bulma';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/header';
+
+// @import 'components/buttons';
+@import 'components/spacing';
+
+@import 'pages/main';
+
+@import 'theme/light';

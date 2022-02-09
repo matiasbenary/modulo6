@@ -1,0 +1,31 @@
+$height: 15px;
+$color-brand: #e61616;
+$color-primary: #ffb703;
+$color-secondary: #023047;
+$color-white: #fff;
+$box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+$direction: center;
+
+$listaTamanios: (1:2px,2:4px,3:8px,4:16px,5:24px,6:32px);
+$listaPosiciones: (t:"top",b:"bottom",s:"left",e:"right");
+
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
