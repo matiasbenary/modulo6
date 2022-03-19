@@ -5,6 +5,18 @@ const deleteModal = document.getElementById("deleteModal");
 const closeDelete = document.getElementById("closeDelete");
 const commentaries = document.getElementById("commentaries");
 
+const alquileresTable = document.getElementById("alquileresTable");
+
+const nombreGuardar =document.getElementById("nombreGuardar");
+const apellidoGuardar= document.getElementById("apellidoGuardar");
+const edadGuardar= document.getElementById("edadGuardar");
+const estadoGuardar= document.getElementById("estadoGuardar");
+const saldoGurdar= document.getElementById("saldoGurdar");
+const btnGuardar= document.getElementById("btnGuardar");
+
+const idEliminar = document.getElementById("idEliminar")
+const btnEliminar = document.getElementById("btnEliminar");
+
 const showModal = () =>{
   modal.classList.add("is-visible");
 }
@@ -35,11 +47,63 @@ const openModal= ()=>  {
   showModal();
 };
 
-const openModalDelete= ()=>  {
+const openModalDelete= (id)=>  {
   showModalDelete();
+  idEliminar.value = id;
 };
+
+btnEliminar.addEventListener("click",()=>{
+  const id = idEliminar.value;
+  fetch(`${URL_BASE}/${id}`,{method: "DELETE"})
+  .then(res=> res.json());
+})
 
 myBtn.addEventListener("click",openModal);
 
+const URL_BASE = "https://6235d0014d0977f1db3f826b.mockapi.io/alquileres";
+
+const renderCard = ()=> {
+  fetch(URL_BASE)
+  .then(res=>res.json())
+  .then(data=>{
+    alquileresTable.innerHTML = data.map(alquiler=>{
+      return `<tr>
+      <td>${alquiler.nombre}</td>
+      <td>${alquiler.apellido}</td>
+      <td>${alquiler.email}</td>
+      <td>${alquiler.edad}</td>
+      <td>${alquiler.estado}</td>
+      <td>${alquiler.saldo}</td>
+      <td>
+        <span class="action">
+          <i class="fas fa-edit"></i>
+        </span>
+        <span class="action" onclick="openModalDelete(${alquiler.id})">
+          <i class="fas fa-trash"></i>
+        </span>
+      </td>
+    </tr>`
+    }).join('')
+  });
+}
+
+renderCard();
 
 
+btnGuardar.addEventListener("click",()=>{
+  const alquiler = {}
+  alquiler.nombre = nombreGuardar.value;
+  alquiler.apellido = apellidoGuardar.value;
+  alquiler.edad = edadGuardar.value;
+  alquiler.email = emailGuardar.value;
+  alquiler.estado = estadoGuardar.value;
+  alquiler.saldo = saldoGurdar.value;
+
+  fetch(URL_BASE,{
+    method: "POST",
+    headers:{
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(alquiler)
+  }).then(res=> res.json());
+})
