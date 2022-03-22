@@ -1,0 +1,67 @@
+$primary-color: #456554;
+$secondary-color: #00CCFF;
+$success-color: #F10086;
+$info-color: #2666CF;
+$danger-color: #009999;
+$text-color: #eee;
+$size1:2px;
+$size2:4px;
+h1{
+  color: $primary-color;
+  font-size: 40px;
+}
+
+.btn{
+  padding:10px;
+}
+
+
+@mixin generateButton($bgcolor,$color){
+  color:$color;
+  background-color:$bgcolor;
+  border-radius:  30px;
+  &:hover{
+    background-color:darken($bgcolor,10%);
+  }
+}
+
+.btn-primary{
+  @include generateButton($primary-color,$text-color);
+}
+
+.btn-secondary{
+  @include generateButton($secondary-color,$text-color);
+}
+
+.btn-success{
+  @include generateButton($success-color,$text-color);
+}
+
+.btn-info{
+  @include generateButton($info-color,$text-color);
+}
+
+.btn-danger{
+  @include generateButton($danger-color,$text-color);
+}
+
+// .error{
+//   border: 1px #f00;
+//   background-color: #fdd;
+// }
+
+// .error--serious{
+//   border: 1px #f00;
+//   background-color: #fdd;
+//   border-width: 3px;
+// }
+
+.error {
+  border: 1px #f00;
+  background-color: #fdd;
+
+  &--serious {
+    @extend .error;
+    border-width: 3px;
+  }
+}
