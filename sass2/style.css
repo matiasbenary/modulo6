@@ -1,0 +1,63 @@
+h1 {
+  color: #456554;
+  font-size: 40px;
+}
+
+.btn {
+  padding: 10px;
+}
+
+.btn-primary {
+  color: #eee;
+  background-color: #456554;
+  border-radius: 30px;
+}
+.btn-primary:hover {
+  background-color: #30473b;
+}
+
+.btn-secondary {
+  color: #eee;
+  background-color: #00CCFF;
+  border-radius: 30px;
+}
+.btn-secondary:hover {
+  background-color: #00a3cc;
+}
+
+.btn-success {
+  color: #eee;
+  background-color: #F10086;
+  border-radius: 30px;
+}
+.btn-success:hover {
+  background-color: #be006a;
+}
+
+.btn-info {
+  color: #eee;
+  background-color: #2666CF;
+  border-radius: 30px;
+}
+.btn-info:hover {
+  background-color: #1e51a4;
+}
+
+.btn-danger {
+  color: #eee;
+  background-color: #009999;
+  border-radius: 30px;
+}
+.btn-danger:hover {
+  background-color: #006666;
+}
+
+.error, .error--serious {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.error--serious {
+  border-width: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */

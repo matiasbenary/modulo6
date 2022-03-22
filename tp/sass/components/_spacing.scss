@@ -1,0 +1,8 @@
+
+@each $key,$value in $listaTamanios {
+  @each $posicion,$posicionValue in $listaPosiciones {
+  .m#{$posicion}-#{$key}{
+    margin-#{$posicionValue}: $value;
+  }
+  }
+}

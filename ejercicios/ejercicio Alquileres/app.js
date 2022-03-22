@@ -156,19 +156,5 @@ btnGuardar.addEventListener('click', () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(alquiler),
-  })
-  .then((res) => {
-  renderCard()
-  Swal.fire({
-  icon: 'success',
-  title: 'Usuario creado',
-  text: 'Se creó el usuario nuevo.',
-  timer: 2000,
-  timerProgressBar: true,
- 
-  })
-  closeModal()
-})
-  
-;
+  }).then((res) => res.json());
 });
