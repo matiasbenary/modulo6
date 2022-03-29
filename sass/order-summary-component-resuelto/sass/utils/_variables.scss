@@ -1,0 +1,31 @@
+
+$spacer: 1rem ;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  auto: auto,
+) ;
+
+$sides: (top, bottom, left, right);
+
+$colorPrimary: hsl(225, 100%, 94%);
+$colorBgPrimary: hsl(245, 75%, 52%);
+
+$colorDark:  hsl(223, 100%, 23%);
+$colorSecondary: hsl(225, 100%, 98%);
+$colorBgSecondary: hsl(224, 23%, 55%);
+
+$breackponts:(
+  sm: 375px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
+);
+
+$fontWeightLigth: 500;
+$fontWeightBold: 700;
+$fontWeightExtraBold: 900;

@@ -1,0 +1,9 @@
+@mixin mediaQuery ($breackpoint){
+  @if map-has-key($map: $breackponts, $key: $breackpoint){
+    @media screen and (min-width: map-get($breackponts,$breackpoint)) {
+      @content
+    }
+  }else{
+    @warn("No existe ese valor como breackpoint");
+  }
+}

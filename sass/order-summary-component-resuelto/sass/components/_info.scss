@@ -1,0 +1,28 @@
+.info {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $colorSecondary;
+  border-radius: 10px;
+
+  &__detail {
+    text-align:left;
+    &--red{
+      color:red;
+    }
+  }
+  &__icon {
+    height:50px;
+  }
+  &__link {
+
+  }
+  &__price {
+    color:$colorBgSecondary;
+  }
+  &__title {
+    font-weight: $fontWeightExtraBold;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="card">
+      <div class="card__header card__header--red">
+        <img class="card__img" src="./images/illustration-hero.svg"></img>
+      </div>
+      <div class="card__body p-3">
+        <h3 class="card__title m-2">  Order Summary</h3>
+        <p class="card__description m-2">
+          You can now listen to millions of songs, audiobooks, and podcasts on any 
+          device anywhere you like!</p>
+        <div class="info">
+          <img class="info__icon" src="./images/icon-music.svg"></img>
+          <div class="info__detail">
+            <p class="info__title">Annual Plan</p>
+            <p class="info__price">$59.99/year</p>
+          </div>
+          <div class="info__link"><a href="">  Change</a></div>
+        </div>
+          <button class="btn btn__primary">Proceed to Payment</button><button class="btn btn__link"> Cancel Order</button></div>
+      </div>
+    </div>
+  </main>
+  <!-- main>.card>(.card__header>img.card__img)+(.card__body>h3.card__title+p.card__description+.info>.info__icon+(.info__detail>p.info__title+p.info__price)+(.info__link>a)+button.btn.btn__primary+button.btn.btn__link) -->
+</body>
+</html>

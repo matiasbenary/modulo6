@@ -1,0 +1,58 @@
+@each $key, $value in $spacers {
+    // generate m* classes
+    .m-#{$key} {
+      margin: #{$value} !important;
+    }
+
+    // generate p* classes excluding key = auto
+    @if $key != auto {
+      .p-#{$key} {
+        padding: #{$value} !important;
+      }
+    }
+}
+@each $key, $value in $spacers {
+  @each $side in $sides {
+    // generate m* classes
+    .m#{str-slice($side, 0, 1)}-#{$key} {
+      margin-#{$side}: #{$value} !important;
+    }
+
+    // generate p* classes excluding key = auto
+    @if $key != auto {
+      .p#{str-slice($side, 0, 1)}-#{$key} {
+        padding-#{$side}: #{$value} !important;
+      }
+    }
+  }
+}
+
+@each $key, $value in $spacers {
+  // generate mx-* classes
+  .mx-#{$key} {
+    margin-left: #{$value} !important;
+    margin-right: #{$value} !important;
+  }
+
+  // generate px-* classes excluding key = auto
+  @if $key != auto {
+    .px-#{$key} {
+      padding-left: #{$value} !important;
+      padding-right: #{$value} !important;
+    }
+  }
+
+  // generate my-* classes
+  .my-#{$key} {
+    margin-top: #{$value} !important;
+    margin-bottom: #{$value} !important;
+  }
+
+  // generate py-* classes excluding key = auto
+  @if $key != auto {
+    .py-#{$key} {
+      padding-top: #{$value} !important;
+      padding-bottom: #{$value} !important;
+    }
+  }
+}
